@@ -22,14 +22,14 @@ const entrepreneurs = [
 
 
 // Filtre dans cette liste les entrepreneurs qui sont nés dans les années 70 ;
-console.log('------------------ Né dans les années 70 ------------------');
-let sampleEntrepreneurs = entrepreneurs.filter(entrepreneur => (entrepreneur.year > 1969 && entrepreneur.year < 1980));
-for(let index in sampleEntrepreneurs) {
-  console.log(sampleEntrepreneurs[index].first + " " + sampleEntrepreneurs[index].last);
+console.log("------------------ Né dans les années 70 ------------------");
+let filterEntrepreneurs = entrepreneurs.filter(entrepreneur => (entrepreneur.year > 1969 && entrepreneur.year < 1980));
+for(let index in filterEntrepreneurs) {
+  console.log(filterEntrepreneurs[index].first + " " + filterEntrepreneurs[index].last);
 }
 
-//Sors une array qui contient le prénom et le nom des entrepreneurs ;
-console.log('------------------ Nom et Prénom ------------------');
+// Sors une array qui contient le prénom et le nom des entrepreneurs ;
+console.log("------------------ Nom et Prénom ------------------");
 let array = [];
 for(let index in entrepreneurs) {
   let Name = entrepreneurs[index].first + " " + entrepreneurs[index].last;
@@ -38,26 +38,19 @@ for(let index in entrepreneurs) {
 }
 
 // Quel âge aurait chaque entrepreneur aujourd'hui ?
-console.log('------------------ Age en 2019 ------------------');
+console.log("------------------ Age en 2019 ------------------");
 for(let index in entrepreneurs) {
   console.log(entrepreneurs[index].first + " " + entrepreneurs[index].last + " aurait : " + (2019 - entrepreneurs[index].year) + " ans actuellement");
 }
 
 //Trie les entrepreneurs par ordre alphabétique du nom de famille.
-console.log('------------------ Tri nom de famille des entrepreneurs ------------------');
+console.log("------------------ Tri nom de famille des entrepreneurs ------------------");
 // je créé un array avec nom et prénom pour trier
 let arrayLastName = [];
 for(let index in entrepreneurs) {
   let all = entrepreneurs[index].last + " " + entrepreneurs[index].first;
   arrayLastName.push(all);
 }
-
-// je trie avec .sort()
+// .sort() pour trier
 arrayLastName.sort();
-let name = [];
-for(let index in arrayLastName) {
-  // affiche prénom nom
-  name = arrayLastName[index].split(' ');
-  //console.log(lastNameBoss[index]);
-  console.log(name[0] + " " + name[1]);
-}
+console.log(arrayLastName)

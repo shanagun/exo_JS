@@ -1,15 +1,15 @@
-let numLevel = prompt ("Salut, bienvenue dans ma super pyramide ! Combien d'étages veux-tu ?");
-let brick = "#";
-let i = 1
+let userEntry = prompt("Salut, bienvenue dans ma super pyramide ! Combien d'étages veux-tu ?");
+console.log("Voici la pyramide :");
 
-while (i<=numLevel) {
-    let line  = "";
-    for (let k = 0; k < (numLevel-i); k++) {
-        line += " "  
-    }
-    for (let index = 0; index < i; index++) {
-        line = line + brick;
-    }
-    i++;
-    console.log(line);
-}
+ for (let i = 1; i <= userEntry; i++) {
+     floor = ""
+     for (let x = 0; x < (userEntry-i); x++) {
+         floor += "  ";
+     }
+
+     for (let x = 0; x < i; x++) {
+         floor += "#";
+     }
+
+     console.log(floor);
+ }
